@@ -25,7 +25,7 @@ class App extends React.Component {
 
   viewHandler = (view, blogData) => {
     let pageTitle = '';
-    formInputs = {
+    let formInputs = {
       name: '',
       title: '',
       post: '',
