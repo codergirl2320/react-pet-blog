@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-//the components go here
-
+//the components will go here
+import Main from './components/Main.js'
 
 //the app class
 class App extends React.Component {
@@ -22,7 +22,7 @@ class App extends React.Component {
         }
      }
   }
-
+  //for managing the blog view data
   viewHandler = (view, blogData) => {
     let pageTitle = '';
     let formInputs = {
@@ -33,9 +33,9 @@ class App extends React.Component {
       id: null
     }
   }
-
-  render(){
-    return(
+  //the render!
+  render() {
+    return (
       <div>
         <h1>Welcome to the Secret Lives of Pets, a blog for pets by pets!</h1>
       </div>
@@ -43,6 +43,5 @@ class App extends React.Component {
   }
 }
 
-
-
+//exporting
 export default App;
