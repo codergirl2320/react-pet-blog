@@ -37,7 +37,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome to the Secret Lives of Pets, a blog for pets by pets!</h1>
+        <header className="header">
+          <img src="./images/city_header.jpg"/>
+          <img className="logo" src="./images/logo.png"/>
+        </header>
+
       </div>
     )
   }

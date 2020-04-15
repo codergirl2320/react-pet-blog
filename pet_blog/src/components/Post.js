@@ -1,10 +1,10 @@
-image React from 'react'
+import React from 'react'
 
 class Post extends React.Component {
   render() {
-    return (
-      //more will go here soon
-    )
+    return (<div>
+
+      </div>)
   }
 }
 
