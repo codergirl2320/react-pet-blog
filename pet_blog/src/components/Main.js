@@ -1,8 +1,10 @@
+//all of the imports we need
 import React from 'react'
 
 import Post from './Post.js'
 import Form from './Form.js'
 
+//I think this is for the heroku stuff if we do it from here
 let defaultUrl = '';
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
@@ -17,13 +19,13 @@ class Main extends React.Component {
       blogPosts: []
     }
   }
-
+  //to grab the blog posts made
   fetchPosts = () => {
     fetch(`${defaultUrl}/posts`)
       .then(data => data.json())
       .then(jData => {
         this.setState({
-          posts: jData
+          blogPosts: jData
         })
       }).catch(err => console.log(err))
   }
