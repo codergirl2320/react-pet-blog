@@ -11,7 +11,7 @@ class App extends React.Component {
       this.state = {
         view: {
           pageName: 'home',
-          pageTitle: ''
+          pageTitle: "What we're howling about!"
         },
         formInputs: {
           name: null,
@@ -32,6 +32,33 @@ class App extends React.Component {
       avatar: '',
       id: null
     }
+    switch(view) {
+      case 'home':
+        pageTitle = "What we're howling about!"
+        break
+      case 'addPost':
+        pageTitle = "Making a post!"
+        break
+      case 'editPost':
+        pageTitle = 'Editing your post!'
+        formInputs = {
+          name: postData.name,
+          title: postData.title,
+          post: postData.post,
+          avatar: postData.avatar,
+          id: postData.id
+        }
+        break
+      default:
+        break
+    }
+    this.setState({
+      view: {
+        pageName: view,
+        pageTitle: pageTitle
+      },
+      formInputs: formInputs
+    })
   }
   //the render!
   render() {
