@@ -40,20 +40,20 @@ class Form extends React.Component {
     return(
       <form onSubmit={this.submitHandler}>
         <label>
-          name
-          <input type="text" placeholder="nickname" value={this.state.name} onChange={this.changeHandler}/>
+          <h4 className="input-names">name</h4>
+          <input className="form-input" type="text" placeholder="nickname" value={this.state.name} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          title
-          <input type="text" placeholder="post title" value={this.state.title} onChange={this.changeHandler}/>
+          <h4 className="input-names">title</h4>
+          <input className="form-input" type="text" placeholder="post title" value={this.state.title} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          entry
-          <textarea placeholder="write your blog post" id="body" value={this.state.post} onChange={this.changeHandler}/>
+          <h4 className="input-names">entry</h4>
+          <textarea className="form-input" placeholder="write your blog post" id="body" value={this.state.post} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          avatar (url)
-          <input type="text" placeholder="your avatar image URL" id="image" value={this.state.avatar} onChange={this.changeHandler}/>
+          <h4 className="input-names">avatar (url)</h4>
+          <input className="form-input" type="text" placeholder="your avatar image URL" id="image" value={this.state.avatar} onChange={this.changeHandler}/>
         </label>
       </form>
     )

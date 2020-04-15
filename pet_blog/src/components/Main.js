@@ -71,7 +71,7 @@ class Main extends React.Component {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        'Content-Type:' 'application/json'
+        'Content-Type': 'application/json'
       }
     }).then(json => {
       this.setState(prevState => {
@@ -82,16 +82,17 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchPost()
+    this.fetchPosts()
   }
 
   render() {
     return (
       <div>
-        <h1>this is the main.js file!</h1>
+        <h1 className="main-title">{this.props.view.pageTitle}</h1>
+        <Form createHandler={this.createHandler} updateHandler={this.updateHandler} formInputs={this.props.formInputs} view={this.props.view}/>
       </div>
     )
   }
 }
 
-export default Post
+export default Main;
