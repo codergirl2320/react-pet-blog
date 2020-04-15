@@ -4,6 +4,7 @@ import './App.css';
 //the components will go here
 import Main from './components/Main.js'
 
+
 //the app class
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends React.Component {
       this.state = {
         view: {
           pageName: 'home',
-          pageTitle: "What we're howling about!"
+          pageTitle: "What we're howling, meowing and chirping about..."
         },
         formInputs: {
           name: null,
@@ -23,7 +24,7 @@ class App extends React.Component {
      }
   }
   //for managing the blog view data
-  viewHandler = (view, blogData) => {
+  viewHandler = (view, postData) => {
     let pageTitle = '';
     let formInputs = {
       name: '',
@@ -68,7 +69,7 @@ class App extends React.Component {
           <img src="./images/city_header.jpg"/>
           <img className="logo" src="./images/logo.png"/>
         </header>
-
+        <Main view={this.state.view} viewHandler={this.viewHandler} formInputs={this.state.formInputs} />
       </div>
     )
   }
