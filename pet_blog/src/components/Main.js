@@ -69,6 +69,7 @@ class Main extends React.Component {
   //the render will be here
   render () {
     return (
+      //it will be more complete tomorrow
       <div>
         <h1>potato</h1>
       </div>
