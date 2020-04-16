@@ -69,7 +69,11 @@ class App extends React.Component {
           <img src="./images/city_header.jpg"/>
           <img className="logo" src="./images/logo.png"/>
         </header>
-        <Main view={this.state.view} viewHandler={this.viewHandler} formInputs={this.state.formInputs} />
+        <Main
+          view={this.state.view}
+          viewHandler={this.viewHandler}
+          formInputs={this.state.formInputs}
+        />
       </div>
     )
   }
