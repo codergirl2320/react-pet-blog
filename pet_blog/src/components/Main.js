@@ -87,10 +87,25 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1 className="main-title">{this.props.view.pageTitle}</h1>
-        <Form createHandler={this.createHandler} updateHandler={this.updateHandler} formInputs={this.props.formInputs} view={this.props.view}/>
-      </div>
+      <main>
+      <h1>{this.props.view.pageTitle}</h1>
+      { this.props.view.pageName === 'home' ?
+        this.state.blogPosts.map((postData) => (
+          <Post
+            key={postData.id}
+            postData={postData}
+            viewHandler={this.props.viewHandler}
+            deleteHandler={this.props.deleteHandler}
+          />
+        ))
+        : <Form
+            createHandler={this.createHandler}
+            formInputs={this.props.formInput}
+            updateHandler={this.updateHandler}
+            view={this.props.view}
+          />
+    }
+    </main>
     )
   }
 }
