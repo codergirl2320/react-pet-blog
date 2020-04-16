@@ -16,7 +16,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      blogPosts: []
+      posts: []
     }
   }
   //to grab the blog posts made
@@ -24,10 +24,8 @@ class Main extends React.Component {
     fetch(`${defaultUrl}/posts`)
       .then(data => data.json())
       .then(jData => {
-        this.setState({
-          blogPosts: jData
-        })
-      }).catch(err => console.log(err))
+        this.setState({posts:jData})
+      }).catch(err=>console.log(err))
   }
 
   createHandler = (createdData) => {
@@ -43,12 +41,10 @@ class Main extends React.Component {
     }).then(jsonedPost => {
       this.props.viewHandler('home')
       this.setState(prevState => {
-        prevState.blogPosts = jsonedPost
-        return {
-          blogPosts: prevState.blogPosts
-        }
+        prevState.posts = jsonedPost
+        return {posts: prevState.posts}
       })
-    }).catch(err => console.log(err))
+    }).catch(err=>console.log(err))
   }
 
   updateHandler = (updatedData) => {
@@ -61,7 +57,7 @@ class Main extends React.Component {
       }
     }).then(updatedPost => {
       this.props.viewHandler('home')
-      this.fetchPost()
+      this.fetchPosts()
     }).catch(err => console.log(err))
   }
 
@@ -75,7 +71,7 @@ class Main extends React.Component {
       }
     }).then(json => {
       this.setState(prevState => {
-        const posts = prevState.blogPosts.filter(post => post.id !== id)
+        const posts = prevState.posts.filter(post => post.id !== id)
         return { posts }
       })
     }).catch(err => console.log(err))
@@ -87,10 +83,10 @@ class Main extends React.Component {
 
   render() {
     return (
-      <main>
-      <h1>{this.props.view.pageTitle}</h1>
+      <div>
+      <h1 className="main-title">{this.props.view.pageTitle}</h1>
       { this.props.view.pageName === 'home' ?
-        this.state.blogPosts.map((postData) => (
+        this.state.posts.map((postData) => (
           <Post
             key={postData.id}
             postData={postData}
@@ -100,12 +96,12 @@ class Main extends React.Component {
         ))
         : <Form
             createHandler={this.createHandler}
-            formInputs={this.props.formInput}
+            formInputs={this.props.formInputs}
             updateHandler={this.updateHandler}
             view={this.props.view}
           />
     }
-    </main>
+    </div>
     )
   }
 }

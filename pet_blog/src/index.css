@@ -3,7 +3,6 @@
   --green: #7EBB2F;
   --yellow: #FCD703;
   --brown: #AF654B;
-  --offwhite: #F6F2EF;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
   border-bottom: 25px solid var(--blue);
 }
 
-img {
+.header-image {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -32,18 +31,22 @@ img {
   top: 32%;
   left: 11%;
   width: 18%;
+  transform: translate(-50%, -35%);
 }
 
 .main-title {
   font-family: 'Open Sans', sans-serif;
   color: var(--green);
-  font-size: 2.5vw;
+  font-size: 2vw;
+  text-transform: uppercase;
+
 }
 
 .input-names {
   font-family: 'Open Sans', sans-serif;
   color: var(--green);
   font-size: 1.5vw;
+  text-transform: uppercase;
 }
 
 .form-input {
@@ -52,11 +55,112 @@ img {
   background-color: var(--blue);
   border: none;
   width: 300px;
-  height: 30px;
+  height: 45px;
   outline: none;
+  border-radius: 5px;
+  font-size: .8em;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5px;
+}
+
+.story-form-input {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  width: 300px;
+  height: 200px;
+  outline: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  font-size: .8em;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  border: 0;
+  background: white;
+  color: var(--blue);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+input[type="submit"]:hover {
+  background-color: var(--brown);
+  cursor: pointer;
 }
 
 ::placeholder {
   font-family: 'Open Sans', sans-serif;
   color: white;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+aside {
+  width: 300px;
+  min-height: calc(100vh - 245px);
+  padding: 0px 20px;
+  box-sizing: border-box;
+  background: var(--green);
+}
+
+aside h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  color: white;
+  border-bottom: 3px solid var(--blue);
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside li {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5px;
+  background: white;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+aside li:hover {
+  background: var(--brown);
+  color: white;
+  cursor: pointer;
 }
