@@ -7,7 +7,7 @@ class Form extends React.Component {
     this.state = {
       name: '',
       title: '',
-      post: '',
+      body: '',
       avatar: '',
       id: null
     }
@@ -30,7 +30,7 @@ class Form extends React.Component {
     this.setState({
       name: this.props.formInputs.name,
       title: this.props.formInputs.title,
-      post: this.props.formInputs.post,
+      body: this.props.formInputs.body,
       avatar: this.props.formInputs.avatar,
       id: this.props.formInputs.id
     })
@@ -42,15 +42,19 @@ class Form extends React.Component {
         <label>
           <input className="form-input" type="text" placeholder="nickname" id="name" value={this.state.name} onChange={this.changeHandler}/><br/>
         </label>
+
         <label>
-          <input className="form-input" type="text" placeholder="post title" id="title" value={this.state.title} onChange={this.changeHandler}/><br/>
+          <input className="form-input" type="text" placeholder="body title" id="title" value={this.state.title} onChange={this.changeHandler}/><br/>
         </label>
+
         <label>
-          <textarea className="story-form-input" placeholder="write your blog post" id="post" value={this.state.post} onChange={this.changeHandler}/><br/>
+          <textarea className="story-form-input" placeholder="write your blog post" id="body" value={this.state.body} onChange={this.changeHandler}/><br/>
         </label>
+
         <label>
           <input className="form-input" type="text" placeholder="your avatar image URL" id="avatar" value={this.state.avatar} onChange={this.changeHandler}/><br/>
         </label>
+
         <input type="submit" value="share"/>
       </form>
     )
