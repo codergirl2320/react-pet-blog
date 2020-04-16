@@ -40,21 +40,18 @@ class Form extends React.Component {
     return(
       <form onSubmit={this.submitHandler}>
         <label>
-          <h4 className="input-names">name</h4>
-          <input className="form-input" type="text" placeholder="nickname" value={this.state.name} onChange={this.changeHandler}/><br/>
+          <input className="form-input" type="text" placeholder="nickname" id="name" value={this.state.name} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          <h4 className="input-names">title</h4>
-          <input className="form-input" type="text" placeholder="post title" value={this.state.title} onChange={this.changeHandler}/><br/>
+          <input className="form-input" type="text" placeholder="post title" id="title" value={this.state.title} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          <h4 className="input-names">entry</h4>
-          <textarea className="form-input" placeholder="write your blog post" id="body" value={this.state.post} onChange={this.changeHandler}/><br/>
+          <textarea className="story-form-input" placeholder="write your blog post" id="post" value={this.state.post} onChange={this.changeHandler}/><br/>
         </label>
         <label>
-          <h4 className="input-names">avatar (url)</h4>
-          <input className="form-input" type="text" placeholder="your avatar image URL" id="image" value={this.state.avatar} onChange={this.changeHandler}/>
+          <input className="form-input" type="text" placeholder="your avatar image URL" id="avatar" value={this.state.avatar} onChange={this.changeHandler}/><br/>
         </label>
+        <input type="submit" value="share"/>
       </form>
     )
   }

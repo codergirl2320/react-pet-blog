@@ -14,10 +14,10 @@ class Post extends React.Component {
         <div className="post-options">
           <button onClick={() => {
             this.props.viewHandler('editPost', this.props.postData)
-          }}>Edit Entry</li>
+          }}>Edit Entry</button>
           <button onClick={() => {
             this.props.deleteHandler(this.props.postData.id)
-          }}>Delete Entry</li>
+          }}>Delete Entry</button>
         </div>
       </article>
     )
