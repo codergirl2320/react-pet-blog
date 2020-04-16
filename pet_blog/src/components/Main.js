@@ -6,10 +6,11 @@ import Form from './Form.js'
 
 //I think this is for the heroku stuff if we do it from here
 let defaultUrl = '';
+
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
 } else {
-  console.log('heroku!');
+  console.log("heroku");
 }
 
 class Main extends React.Component {
@@ -21,7 +22,7 @@ class Main extends React.Component {
   }
   //to grab the blog posts made
   fetchPosts = () => {
-    fetch(`${defaultUrl}/posts`)
+    fetch(`${defaultUrl}/api/posts`)
       .then(data => data.json())
       .then(jData => {
         this.setState({posts:jData})
@@ -29,7 +30,7 @@ class Main extends React.Component {
   }
 
   createHandler = (createdData) => {
-    fetch(`${defaultUrl}/posts`, {
+    fetch(`${defaultUrl}/api/posts`, {
       body: JSON.stringify(createdData),
       method: 'POST',
       headers: {
@@ -42,13 +43,17 @@ class Main extends React.Component {
       this.props.viewHandler('home')
       this.setState(prevState => {
         prevState.posts = jsonedPost
-        return {posts: prevState.posts}
+        return {posts: prevState.posts
+        }
       })
     }).catch(err=>console.log(err))
   }
+  componentDidMount() {
+    this.fetchPosts()
+  }
 
   updateHandler = (updatedData) => {
-    fetch(`${defaultUrl}/posts/${updatedData.id}`, {
+    fetch(`${defaultUrl}/api/posts/${updatedData.id}`, {
       body: JSON.stringify(updatedData),
       method: 'PUT',
       headers: {
@@ -62,7 +67,7 @@ class Main extends React.Component {
   }
 
   deleteHandler = (id) => {
-    fetch(`${defaultUrl}/posts/${id}`,
+    fetch(`${defaultUrl}/api/posts/${id}`,
     {
       method: 'DELETE',
       headers: {
@@ -77,9 +82,7 @@ class Main extends React.Component {
     }).catch(err => console.log(err))
   }
 
-  componentDidMount() {
-    this.fetchPosts()
-  }
+
 
   render() {
     return (

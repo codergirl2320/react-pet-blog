@@ -18,7 +18,7 @@ class App extends React.Component {
         formInputs: {
           name: null,
           title: null,
-          post: null,
+          body: null,
           avatar: null, //the little pictures one sees on blog or forum posts for a user's picture
           id: null
         }
@@ -30,7 +30,7 @@ class App extends React.Component {
     let formInputs = {
       name: '',
       title: '',
-      post: '',
+      body: '',
       avatar: '',
       id: null
     }
@@ -46,7 +46,7 @@ class App extends React.Component {
         formInputs = {
           name: postData.name,
           title: postData.title,
-          post: postData.post,
+          body: postData.body,
           avatar: postData.avatar,
           id: postData.id
         }

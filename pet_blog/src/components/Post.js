@@ -9,7 +9,7 @@ class Post extends React.Component {
           <h1>{this.props.postData.name} barked: </h1>
         </div>
         <div className="post-body">
-          {this.props.postData.post}
+          {this.props.postData.body}
         </div>
         <div className="post-options">
           <button onClick={() => {
