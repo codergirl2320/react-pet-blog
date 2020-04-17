@@ -10,7 +10,7 @@ let defaultUrl = '';
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
 } else {
-  defaultUrl = 'http://gentle-river-70476.herokuapp.com/api/posts'
+  defaultUrl = 'https://cors-anywhere.herokuapp.com/http://gentle-river-70476.herokuapp.com/api'
 }
 
 class Main extends React.Component {
