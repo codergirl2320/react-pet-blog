@@ -75,15 +75,19 @@ body {
 .aside-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+}
+
+.aside-images {
+  overflow: hidden;
 }
 
 aside {
-  width: 300px;
+  width: 350px;
   min-height: calc(100vh - 245px);
-  padding: 0px 20px;
   box-sizing: border-box;
+  padding-left: 20px;
   background: var(--green);
+  margin: 0 auto;
 }
 
 aside h1 {
@@ -98,11 +102,12 @@ aside h1 {
 aside ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 aside li {
-  display: inline-block;
-  width: 100%;
+  /* display: inline-block; */
+  width: 90%;
   padding: 10px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -244,11 +249,9 @@ input[type="submit"]:hover {
 }
 
 .Mel {
-  width: 35%;
+  width: 125%;
   position: relative;
-  right: -50%;
-  bottom: -10%;
-  margin-bottom: -50px;
+  right: -8%;
 }
 
 /* ================= */
@@ -277,17 +280,17 @@ article {
 }
 
 .post-header img {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
-  padding: 2px;
   border: 5px solid var(--yellow);
   align-self: center;
+  padding: 0;
 }
 
 .post-header h1 {
   font-family: var(--main-font);
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: var(--blue);
   margin: 5px 10px;
   text-transform: uppercase;
@@ -346,9 +349,25 @@ article {
 
 
 .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--blue);
   width: 100%;
-  height: 112px;
+  height: 185px;
   margin: 0;
   padding: 0;
+}
+
+.note-images {
+  width: 140px;
+  border: 5px solid var(--green);
+}
+
+.Sweetpea {
+  width: 10%;
+  position: absolute;
+  left: 47%;
+  bottom: 29%;
 }

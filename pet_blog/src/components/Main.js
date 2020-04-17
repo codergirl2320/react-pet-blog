@@ -103,8 +103,8 @@ class Main extends React.Component {
             view={this.props.view}
           />
     }
-    <img className="Tattoo" src="./images/Tattoo.png"/>
-    <img className="Mel" src="./images/Mel.png"/>
+    <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
+    
     </div>
     )
   }
