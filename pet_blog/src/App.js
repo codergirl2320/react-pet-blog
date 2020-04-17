@@ -77,6 +77,9 @@ class App extends React.Component {
             formInputs={this.state.formInputs}
           />
           </div>
+          <About/>
+
+          <Likes/>
           <div className="aside-container">
             <Aside viewHandler={this.viewHandler}/>
           </div>
