@@ -10,7 +10,7 @@ let defaultUrl = '';
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
 } else {
-  console.log("heroku");
+  defaultUrl = 'http://gentle-river-70476.herokuapp.com/api/posts'
 }
 
 class Main extends React.Component {
@@ -22,7 +22,7 @@ class Main extends React.Component {
   }
   //to grab the blog posts made
   fetchPosts = () => {
-    fetch(`${defaultUrl}/api/posts`)
+    fetch(`${defaultUrl}/posts`)
       .then(data => data.json())
       .then(jData => {
         this.setState({posts:jData})
@@ -30,7 +30,7 @@ class Main extends React.Component {
   }
 
   createHandler = (createdData) => {
-    fetch(`${defaultUrl}/api/posts`, {
+    fetch(`${defaultUrl}/posts`, {
       body: JSON.stringify(createdData),
       method: 'POST',
       headers: {
@@ -53,7 +53,7 @@ class Main extends React.Component {
   }
 
   updateHandler = (updatedData) => {
-    fetch(`${defaultUrl}/api/posts/${updatedData.id}`, {
+    fetch(`${defaultUrl}/posts/${updatedData.id}`, {
       body: JSON.stringify(updatedData),
       method: 'PUT',
       headers: {
@@ -67,8 +67,7 @@ class Main extends React.Component {
   }
 
   deleteHandler = (id) => {
-    fetch(`${defaultUrl}/api/posts/${id}`,
-    {
+    fetch(`${defaultUrl}/posts/${id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -94,7 +93,7 @@ class Main extends React.Component {
             key={postData.id}
             postData={postData}
             viewHandler={this.props.viewHandler}
-            deleteHandler={this.props.deleteHandler}
+            deleteHandler={this.deleteHandler}
           />
         ))
         : <Form
@@ -104,6 +103,8 @@ class Main extends React.Component {
             view={this.props.view}
           />
     }
+    <img className="Tattoo" src="./images/Tattoo.png"/>
+    <img className="Mel" src="./images/Mel.png"/>
     </div>
     )
   }

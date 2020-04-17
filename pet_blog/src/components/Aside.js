@@ -9,6 +9,7 @@ class Aside extends React.Component {
           <li onClick={() => {this.props.viewHandler('home')}}>home</li>
           <li onClick={() => {this.props.viewHandler('addPost')}}>add post</li>
         </ul>
+        <img src="./images/Buddy.png"/>
       </aside>
     )
   }
