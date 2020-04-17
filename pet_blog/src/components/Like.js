@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Like extends React.Component {
+class Likes extends React.Component {
   render(){
     return (
       <div>
@@ -12,4 +12,4 @@ class Like extends React.Component {
 
 }
 
-export default About
+export default Likes
