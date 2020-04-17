@@ -5,11 +5,11 @@ class Form extends React.Component {
   constructor() {
     super()
     this.state = {
+      id: null,
       name: '',
-      title: '',
-      body: '',
       avatar: '',
-      id: null
+      body: '',
+      title: ''
     }
   }
 
@@ -28,17 +28,17 @@ class Form extends React.Component {
 
   componentDidMount() {
     this.setState({
+      id: this.props.formInputs.id,
       name: this.props.formInputs.name,
       title: this.props.formInputs.title,
-      body: this.props.formInputs.body,
       avatar: this.props.formInputs.avatar,
-      id: this.props.formInputs.id
+      body: this.props.formInputs.body
     })
   }
 
   render() {
     return(
-      <form onSubmit={this.submitHandler}>
+      <form className="create-form" onSubmit={this.submitHandler}>
         <label>
           <input className="form-input" type="text" placeholder="nickname" id="name" value={this.state.name} onChange={this.changeHandler}/><br/>
         </label>
@@ -55,7 +55,8 @@ class Form extends React.Component {
           <input className="form-input" type="text" placeholder="your avatar image URL" id="avatar" value={this.state.avatar} onChange={this.changeHandler}/><br/>
         </label>
 
-        <input type="submit" value="share"/>
+        <input type="submit" value="share"/><br/>
+        <img className="Ozone" src="./images/Ozone.png"/>
       </form>
     )
   }

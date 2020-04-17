@@ -4,6 +4,7 @@ import React from 'react';
 import Main from './components/Main.js'
 import Header from './components/Header.js'
 import Aside from './components/Aside.js'
+import Footer from './components/Footer.js'
 
 
 //the app class
@@ -13,14 +14,14 @@ class App extends React.Component {
       this.state = {
         view: {
           pageName: 'home',
-          pageTitle: "What we're howling, meowing and chirping about..."
+          pageTitle: "What we're really thinking..."
         },
         formInputs: {
+          id: null,
           name: null,
-          title: null,
-          body: null,
           avatar: null, //the little pictures one sees on blog or forum posts for a user's picture
-          id: null
+          body: null,
+          title: null
         }
      }
   }
@@ -28,15 +29,15 @@ class App extends React.Component {
   viewHandler = (view, postData) => {
     let pageTitle = '';
     let formInputs = {
+      id: null,
       name: '',
-      title: '',
-      body: '',
       avatar: '',
-      id: null
+      body: '',
+      title: '',
     }
     switch(view) {
       case 'home':
-        pageTitle = "What we're howling about!"
+        pageTitle = "What we're really thinking..."
         break
       case 'addPost':
         pageTitle = "What's on your mind?"
@@ -44,11 +45,11 @@ class App extends React.Component {
       case 'editPost':
         pageTitle = 'Editing your post!'
         formInputs = {
+          id: postData.id,
           name: postData.name,
-          title: postData.title,
-          body: postData.body,
           avatar: postData.avatar,
-          id: postData.id
+          body: postData.body,
+          title: postData.title
         }
         break
       default:
@@ -67,16 +68,19 @@ class App extends React.Component {
     return (
       <div className="large-container">
         <Header/>
+        <div className="lower-container">
         <div className="main-container">
           <Main
             view={this.state.view}
             viewHandler={this.viewHandler}
             formInputs={this.state.formInputs}
           />
+          </div>
           <div className="aside-container">
             <Aside viewHandler={this.viewHandler}/>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

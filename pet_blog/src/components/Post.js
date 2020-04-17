@@ -4,20 +4,27 @@ class Post extends React.Component {
   render() {
     return (
       <article>
-        <div className="post-header">
-          <img src={this.props.postData.avatar} alt=""/>
-          <h1>{this.props.postData.name} barked: </h1>
+        <div className="post-title">
+          {this.props.postData.title}
         </div>
-        <div className="post-body">
-          {this.props.postData.body}
+        <div className="post-box">
+          <div className="post-header">
+            <img className="avatar" src={this.props.postData.avatar} alt=""/><br/>
+            <h1>{this.props.postData.name}</h1>
+          </div><br/>
+          <div className="post-body">
+            {this.props.postData.body}
+          </div>
         </div>
         <div className="post-options">
-          <button onClick={() => {
-            this.props.viewHandler('editPost', this.props.postData)
-          }}>Edit Entry</button>
-          <button onClick={() => {
-            this.props.deleteHandler(this.props.postData.id)
-          }}>Delete Entry</button>
+          <ul>
+            <li onClick={() => {
+              this.props.viewHandler('editPost', this.props.postData)
+            }}>Edit Entry</li>
+            <li onClick={() => {
+              this.props.deleteHandler(this.props.postData.id)
+            }}>Delete Entry</li>
+            </ul>
         </div>
       </article>
     )
