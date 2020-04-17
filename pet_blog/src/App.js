@@ -5,7 +5,7 @@ import Main from './components/Main.js'
 import Header from './components/Header.js'
 import Aside from './components/Aside.js'
 import Footer from './components/Footer.js'
-import Like from './components/Like.js'
+import Likes from './components/Like.js'
 import About from './components/About.js'
 
 //the app class
