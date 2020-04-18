@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from "react";
 
 class Aside extends React.Component {
   render() {
@@ -8,6 +8,7 @@ class Aside extends React.Component {
         <ul>
           <li onClick={() => {this.props.viewHandler('home')}}>home</li>
           <li onClick={() => {this.props.viewHandler('addPost')}}>add post</li>
+          <li><a href="/about">about</a></li>
         </ul>
         <img src="./images/Buddy.png"/>
       </aside>
