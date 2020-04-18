@@ -56,7 +56,7 @@ class Form extends React.Component {
         </label>
 
         <input type="submit" value="share"/><br/>
-        <img className="Ozone" src="./images/Ozone.png" alt=""/>
+        
         <img className="Sweetpea" src="./images/Sweetpea.png" alt=""/>
       </form>
     )
