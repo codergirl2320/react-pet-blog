@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 //the components will go here
@@ -5,7 +6,7 @@ import Main from './components/Main.js'
 import Header from './components/Header.js'
 import Aside from './components/Aside.js'
 import Footer from './components/Footer.js'
-import About from './components/About.js'
+
 
 //the app class
 class App extends React.Component {
@@ -22,20 +23,11 @@ class App extends React.Component {
           avatar: null, //the little pictures one sees on blog or forum posts for a user's picture
           body: null,
           title: null
-        },
-        about: {
-          id: null,
-          name: 'human',
-          avatar:'picture',
-          about: 'about human'
         }
-     };
-
+     }
   }
-
-
   //for managing the blog view data
-  viewHandler = (view, postData, humanStuff) => {
+  viewHandler = (view, postData) => {
     let pageTitle = '';
     let formInputs = {
       id: null,
@@ -43,12 +35,6 @@ class App extends React.Component {
       avatar: '',
       body: '',
       title: '',
-    };
-    let aboutHumans = {
-      id: null,
-      name: '',
-      avatar: '',
-      about: ''
     }
     switch(view) {
       case 'home':
@@ -67,10 +53,6 @@ class App extends React.Component {
           title: postData.title
         }
         break
-      case 'about':
-        pageTitle = 'About the Team!'
-  
-          break
       default:
         break
     }
@@ -80,8 +62,7 @@ class App extends React.Component {
         pageTitle: pageTitle
       },
       formInputs: formInputs
-    },
-  )
+    })
   }
   //the render!
   render() {
@@ -96,12 +77,8 @@ class App extends React.Component {
             formInputs={this.state.formInputs}
           />
           </div>
-
-
-
           <div className="aside-container">
             <Aside viewHandler={this.viewHandler}/>
-
           </div>
         </div>
         <Footer/>

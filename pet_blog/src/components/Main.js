@@ -1,16 +1,17 @@
+
 //all of the imports we need
 import React from 'react'
 
 import Post from './Post.js'
 import Form from './Form.js'
-import About from './About.js'
+
 //I think this is for the heroku stuff if we do it from here
 let defaultUrl = '';
 
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
 } else {
-  defaultUrl = 'https://cors-anywhere.herokuapp.com/http://gentle-river-70476.herokuapp.com/api'
+  defaultUrl = 'http://gentle-river-70476.herokuapp.com/api/posts'
 }
 
 class Main extends React.Component {
@@ -95,7 +96,6 @@ class Main extends React.Component {
             viewHandler={this.props.viewHandler}
             deleteHandler={this.deleteHandler}
           />
-
         ))
         : <Form
             createHandler={this.createHandler}
@@ -103,8 +103,11 @@ class Main extends React.Component {
             updateHandler={this.updateHandler}
             view={this.props.view}
           />
-
     }
+<<<<<<< HEAD
+    <img className="Tattoo" src="./images/Tattoo.png"/>
+    <img className="Mel" src="./images/Mel.png"/>
+=======
 
     <About
     view={this.state.view}
@@ -121,6 +124,7 @@ class Main extends React.Component {
       <img className="poodle" src="./images/poodle.png" alt=""/>
     </div>
 
+>>>>>>> 1da4af8cc36b70345ae4715e729646f8ddc9ba33
     </div>
     )
   }
