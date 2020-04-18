@@ -1,6 +1,19 @@
 import React from 'react'
 
 class Post extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      likes: 0
+    }
+     this.likedPost = this.likedPost.bind(this);
+  }
+
+  likedPost = (event) => {
+    this.setState({likes: this.state.likes + 1})
+
+  }
+
   render() {
     return (
       <article>
@@ -25,6 +38,9 @@ class Post extends React.Component {
               this.props.deleteHandler(this.props.postData.id)
             }}>Delete Entry</li>
             </ul>
+            <p>Love for this post: {this.state.likes}</p>
+            <button onClick={this.likedPost}>Loves</button>
+
         </div>
       </article>
     )

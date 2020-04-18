@@ -3,7 +3,7 @@ import React from 'react'
 
 import Post from './Post.js'
 import Form from './Form.js'
-
+import About from './About.js'
 //I think this is for the heroku stuff if we do it from here
 let defaultUrl = '';
 
@@ -95,6 +95,7 @@ class Main extends React.Component {
             viewHandler={this.props.viewHandler}
             deleteHandler={this.deleteHandler}
           />
+
         ))
         : <Form
             createHandler={this.createHandler}
@@ -102,7 +103,14 @@ class Main extends React.Component {
             updateHandler={this.updateHandler}
             view={this.props.view}
           />
+
     }
+
+    <About
+    view={this.state.view}
+    />
+
+
     <div className="base-images">
       <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
       <img className="Duke_two" src="./images/Duke.png" alt=""/>
@@ -112,6 +120,7 @@ class Main extends React.Component {
       <img className="Chloe" src="./images/Chloe.png" alt=""/>
       <img className="poodle" src="./images/poodle.png" alt=""/>
     </div>
+
     </div>
     )
   }
