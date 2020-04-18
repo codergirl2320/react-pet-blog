@@ -11,6 +11,7 @@ class Aside extends React.Component {
         </ul>
         <div className="aside-images">
           <img className="Buddy" src="./images/Buddy.png" alt=""/>
+          <img className="Ozone" src="./images/Ozone.png" alt=""/>
           <img className="Mel" src="./images/Mel.png" alt=""/>
         </div>
       </aside>

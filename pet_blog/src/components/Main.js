@@ -103,8 +103,15 @@ class Main extends React.Component {
             view={this.props.view}
           />
     }
-    <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
-    
+    <div className="base-images">
+      <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
+      <img className="Duke_two" src="./images/Duke.png" alt=""/>
+      <img className="Snowball" src="./images/Snowball.png" alt=""/>
+      <img className="Norman" src="./images/Norman.png" alt=""/>
+      <img className="Max_Gidget" src="./images/Max_Gidget.png" alt=""/>
+      <img className="Chloe" src="./images/Chloe.png" alt=""/>
+      <img className="poodle" src="./images/poodle.png" alt=""/>
+    </div>
     </div>
     )
   }
