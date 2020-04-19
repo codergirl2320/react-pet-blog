@@ -106,6 +106,7 @@ class Main extends React.Component {
           <img className="Snowball" src="./images/Snowball.png" alt=""/>
           <img className="Norman" src="./images/Norman.png" alt=""/>
           <img className="Max_Gidget" src="./images/Max_Gidget.png" alt=""/>
+
         </div>
       </div>
     )
