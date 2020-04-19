@@ -39,12 +39,14 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
 ----
 ## Resources
 
- *	
- * 
- * Google Fonts (https://fonts.google.com/)
+ * Adobe Illustrator (to re-create the logo for manipulation)
+ * Adobe Photoshop (to manipulate images)
  * Adobe InDesign (to create color palette from the header image)
  * Adobe Color (https://color.adobe.com/create) (to manipulate the color palette)
- * Adobe Illustrator (to re-create the logo for manipulation)
+ * What the Font app (to identify and match fonts)
+ * Google Fonts (https://fonts.google.com/)
+ * FAVPNG (https://favpng.com/)	(free PNG files)
+ * IMGBIN (https://imgbin.com/)	(free PNG files)
 
 ----
 ## Stretch Goals We Tried
