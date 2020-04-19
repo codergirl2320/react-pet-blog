@@ -26,16 +26,15 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
 
 ----
 ## User Stories
-* As a user, I can see the site - but have to join to post.
-* As a user, I can create a login/password and know that they are encrypted and safe.
-* As a user, I can post travel pictures and share must do's & don'ts.
-* As a user, I can search the posts by keyword.
-* As a user, I can "like" posts.
+* As a user, I can post messages to my friends.
+* As a user, I can like my friends posts.
+* As a user, I can edit my posts.
+* As a user, I can delete posts.
 
 ----
 ## Wireframe
 
-![alt text](IMG_3208.jpg)
+![alt text](https://i.imgur.com/AiFzdxW.png)
 
 ----
 ## Resources
