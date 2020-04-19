@@ -27,10 +27,6 @@ body {
   background-color: var(--yellow);
 }
 
-html {
-  width: 100%;
-}
-
 /* ================= */
 /*       HEADER      */
 /* ================= */
@@ -60,82 +56,20 @@ html {
 }
 
 /* ================= */
-/*   MAIN CONTAINER  */
+/*  MAIN CONTAINER   */
 /* ================= */
 .lower-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
+
 .main-container {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
 }
 
-/* ================= */
-/*       ASIDE       */
-/* ================= */
-.aside-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.aside-images {
-  overflow: hidden;
-}
-
-aside {
-  width: 350px;
-  min-height: calc(100vh - 245px);
-  box-sizing: border-box;
-  /* padding-left: 20px; */
-  background: var(--green);
-  margin: 0 auto;
-}
-
-aside h1 {
-  font-family: var(--main-font);
-  font-size: 2em;
-  color: white;
-  border-bottom: 3px solid var(--blue);
-  margin-bottom: 0;
-  text-transform: uppercase;
-  margin-left: 20px;
-}
-
-aside ul {
-  list-style-type: none;
-  padding: 0;
-
-}
-
-aside li {
-  /* display: inline-block; */
-  width: 90%;
-  padding: 10px;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  color: var(--blue);
-  font-family: var(--main-font);
-  margin-bottom: 5px;
-  margin-left: 20px;
-  background: white;
-  transition: 0.3s ease-in-out;
-  border-radius: 5px;
-  border: 2px solid var(--blue);
-  /* box-shadow: 2px 2px 3px var(--brown); */
-}
-
-aside li:hover {
-  background: var(--yellow);
-  color: var(--blue);
-  cursor: pointer;
-}
-
-/* ================= */
-/*       MAIN        */
-/* ================= */
 .main-title {
   font-family: var(--main-font);
   color: var(--green);
@@ -147,7 +81,6 @@ aside li:hover {
 /* ================= */
 /*       FORM        */
 /* ================= */
-
 .create-form {
   width: 80%;
   padding: 15px 20px 0px 20px;
@@ -208,7 +141,6 @@ input[type="text"] {
   display: inline-block;
   padding: 10px;
   width: 100%;
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
   margin: 5px;
   color: var(--green);
@@ -240,81 +172,6 @@ input[type="submit"]:hover {
   color: var(--yellow);
 }
 
-.base-images {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.Tattoo {
-  width: 30%;
-  position: relative;
-  left: -1%;
-  padding-top: 10%;
-}
-
-.Snowball {
-  width: 22%;
-  position: relative;
-  left: -76%;
-  padding-top: 22%;
-}
-
-.Norman {
-  width: 15%;
-  position: relative;
-  left: -65%;
-  padding-top: 41%;
-}
-
-.Max_Gidget {
-  width: 33%;
-  position: relative;
-  left: -65%;
-  padding-top: 15%;
-}
-
-.Duke_two {
-  width: 67%;
-  position: relative;
-  left: -12%;
-  padding-top: -30%;
-}
-
-.Chloe {
-  width: 35%;
-  position: relative;
-  left: -69%;
-  padding-top: 15%;
-}
-
-.Buddy {
-  width: 200%;
-  position: relative;
-  right: -15%;
-  bottom: 0%;
-}
-
-.Ozone {
-  width: 150%;
-  position: relative;
-  right: 50%;
-  bottom: 0%;
-}
-
-.Mel {
-  width: 100%;
-  position: relative;
-  right: -16%;
-}
-
-.poodle {
-  width: 27%;
-  position: relative;
-  left: -96%;
-  padding-top: 11%;
-}
-
 /* ================= */
 /*       POSTS       */
 /* ================= */
@@ -326,7 +183,6 @@ article {
   margin: 20px auto;
   border-radius: 5px;
   border: 5px solid var(--blue);
-  /* box-shadow: 2px 2px 5px var(--brown); */
 }
 
 .post-box {
@@ -355,7 +211,7 @@ article {
   color: var(--blue);
   margin: 5px 10px;
   text-transform: uppercase;
-    text-align: center;
+  text-align: center;
 }
 
 .post-body {
@@ -363,7 +219,6 @@ article {
   padding: 3px 10px;
   box-sizing: border-box;
   border-left: 2px solid var(--brown);
-  /* text-transform: uppercase; */
   font-family: var(--post-font);
   color: var(--green);
   font-size: 1.5em;
@@ -408,6 +263,186 @@ article {
   width: 25px;
 }
 
+.Sweetpea {
+  width: 10%;
+  position: absolute;
+  left: 47%;
+  bottom: 29%;
+}
+
+/* ================= */
+/*      LIKES        */
+/* ================= */
+.like-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.heart-button {
+  height: 25px;
+  width: 50px;
+  color: var(--blue);
+  border: 2px solid var(--brown);
+  outline: none;
+  margin-bottom: 12px;
+  font-size: .9em;
+  border-radius: 5%;
+}
+
+.heart-button:hover {
+  background: var(--yellow);
+  cursor: pointer;
+}
+
+.counter {
+  color: var(--green);
+  font-family: var(--main-font);
+  margin: 5px 5px 18px 7px;
+  font-size: 1em;
+}
+
+/* ================= */
+/*       ASIDE       */
+/* ================= */
+.aside-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.aside-images {
+  overflow: hidden;
+}
+
+aside {
+  width: 350px;
+  min-height: calc(100vh - 245px);
+  box-sizing: border-box;
+  background: var(--green);
+  margin: 0 auto;
+}
+
+aside h1 {
+  font-family: var(--main-font);
+  font-size: 2em;
+  color: white;
+  border-bottom: 3px solid var(--blue);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside li {
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-family: var(--main-font);
+  margin-bottom: 5px;
+  margin-left: 20px;
+  background: white;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+  border: 2px solid var(--blue);
+}
+
+aside li:hover {
+  background: var(--yellow);
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.Buddy {
+  width: 200%;
+  position: relative;
+  right: -15%;
+  bottom: 0%;
+}
+
+.Ozone {
+  width: 150%;
+  position: relative;
+  right: 50%;
+  bottom: 0%;
+}
+
+.Mel {
+  width: 100%;
+  position: relative;
+  right: -16%;
+}
+
+/* ================= */
+/*    BASE IMAGES    */
+/* ================= */
+.base-images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Tattoo {
+  width: 30%;
+  position: relative;
+  left: -1%;
+  padding-top: 10%;
+}
+
+.Snowball {
+  width: 22%;
+  position: relative;
+  left: -76%;
+  padding-top: 22%;
+}
+
+.Duke_two {
+  width: 67%;
+  position: relative;
+  left: -12%;
+  padding-top: -30%;
+}
+
+.Norman {
+  width: 15%;
+  position: relative;
+  left: -65%;
+  padding-top: 41%;
+}
+
+.Max_Gidget {
+  width: 33%;
+  position: relative;
+  left: -65%;
+  padding-top: 15%;
+}
+
+.Chloe {
+  width: 35%;
+  position: relative;
+  left: -69%;
+  padding-top: 15%;
+}
+
+.poodle {
+  width: 27%;
+  position: relative;
+  left: -96%;
+  padding-top: 11%;
+}
+
+/* ================= */
+/*      FOOTER       */
+/* ================= */
 .footer {
   display: flex;
   flex-direction: row;
@@ -423,13 +458,6 @@ article {
 .note-images {
   width: 140px;
   border: 4px solid var(--yellow);
-}
-
-.Sweetpea {
-  width: 10%;
-  position: absolute;
-  left: 47%;
-  bottom: 29%;
 }
 
 .dog {
