@@ -57,6 +57,11 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
   
 * *Moment.js Stretch Goal*
   * Stephen: Just type whatever you want to say here...
+  
+ (EXAMPLE OF WHAT I SAID IF IT HELPS...
+  "Added timestamps and tried for many hours to get Moment.js to convert them. But even with Dan's help, I wasn't able to 
+  get there. The best I got was getting the "createdAt" time (created by the timestamp) to appear on the page...but as 
+  we know, that's not very human friendly.")
 
 ----
 ## :star2: The 'Secret Blog of Pets' Team
