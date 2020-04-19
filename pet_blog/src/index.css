@@ -411,7 +411,6 @@ aside li:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .Tattoo {
@@ -603,7 +602,6 @@ aside li:hover {
     width: 100px;
     height: 100px;
   }
-
 }
 
 @media (max-width: 500px) {
