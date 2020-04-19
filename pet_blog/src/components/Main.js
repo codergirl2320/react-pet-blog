@@ -10,7 +10,7 @@ let defaultUrl = '';
 if(process.env.NODE_ENV === 'development') {
   defaultUrl = 'http://localhost:8888'
 } else {
-  defaultUrl = 'http://gentle-river-70476.herokuapp.com/api/posts'
+  defaultUrl = 'https://cors-anywhere.herokuapp.com/http://gentle-river-70476.herokuapp.com/api'
 }
 
 class Main extends React.Component {
@@ -80,32 +80,34 @@ class Main extends React.Component {
       })
     }).catch(err => console.log(err))
   }
-
-
-
   render() {
     return (
       <div>
-      <h1 className="main-title">{this.props.view.pageTitle}</h1>
-      { this.props.view.pageName === 'home' ?
-        this.state.posts.map((postData) => (
-          <Post
-            key={postData.id}
-            postData={postData}
-            viewHandler={this.props.viewHandler}
-            deleteHandler={this.deleteHandler}
-          />
-        ))
-        : <Form
-            createHandler={this.createHandler}
-            formInputs={this.props.formInputs}
-            updateHandler={this.updateHandler}
-            view={this.props.view}
-          />
-    }
-    <img className="Tattoo" src="./images/Tattoo.png"/>
-    <img className="Mel" src="./images/Mel.png"/>
-    </div>
+        <h1 className="main-title">{this.props.view.pageTitle}</h1>
+        { this.props.view.pageName === 'home' ?
+          this.state.posts.map((postData) => (
+            <Post
+              key={postData.id}
+              postData={postData}
+              viewHandler={this.props.viewHandler}
+              deleteHandler={this.deleteHandler}
+            />
+          ))
+          : <Form
+              createHandler={this.createHandler}
+              formInputs={this.props.formInputs}
+              updateHandler={this.updateHandler}
+              view={this.props.view}
+            />
+        }
+        <div className="base-images">
+          <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
+          <img className="Duke_two" src="./images/Duke.png" alt=""/>
+          <img className="Snowball" src="./images/Snowball.png" alt=""/>
+          <img className="Norman" src="./images/Norman.png" alt=""/>
+          <img className="Max_Gidget" src="./images/Max_Gidget.png" alt=""/>
+        </div>
+      </div>
     )
   }
 }
