@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 //the components will go here
@@ -7,7 +6,6 @@ import Header from './components/Header.js'
 import Aside from './components/Aside.js'
 import Footer from './components/Footer.js'
 
-
 //the app class
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +13,7 @@ class App extends React.Component {
       this.state = {
         view: {
           pageName: 'home',
-          pageTitle: "What we're really thinking..."
+          pageTitle: "Here's my current sitch..."
         },
         formInputs: {
           id: null,
@@ -38,13 +36,13 @@ class App extends React.Component {
     }
     switch(view) {
       case 'home':
-        pageTitle = "What we're really thinking..."
+        pageTitle = "Here's my current sitch..."
         break
       case 'addPost':
-        pageTitle = "What's on your mind?"
+        pageTitle = "Share your wins and struggles..."
         break
       case 'editPost':
-        pageTitle = 'Editing your post!'
+        pageTitle = "Oops...what did you really mean to say?"
         formInputs = {
           id: postData.id,
           name: postData.name,
@@ -70,12 +68,12 @@ class App extends React.Component {
       <div className="large-container">
         <Header/>
         <div className="lower-container">
-        <div className="main-container">
-          <Main
-            view={this.state.view}
-            viewHandler={this.viewHandler}
-            formInputs={this.state.formInputs}
-          />
+          <div className="main-container">
+            <Main
+              view={this.state.view}
+              viewHandler={this.viewHandler}
+              formInputs={this.state.formInputs}
+            />
           </div>
           <div className="aside-container">
             <Aside viewHandler={this.viewHandler}/>

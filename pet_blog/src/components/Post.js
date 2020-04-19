@@ -11,7 +11,6 @@ class Post extends React.Component {
 
   likedPost = (event) => {
     this.setState({likes: this.state.likes + 1})
-
   }
 
   render() {
@@ -37,10 +36,11 @@ class Post extends React.Component {
             <li onClick={() => {
               this.props.deleteHandler(this.props.postData.id)
             }}>Delete Entry</li>
-            </ul>
-            <p>Love for this post: {this.state.likes}</p>
-            <button onClick={this.likedPost}>Loves</button>
-
+          </ul>
+        <div className="like-container">
+          <button className="heart-button" onClick={this.likedPost}>&hearts;</button>
+          <p className="counter">{this.state.likes}</p>
+        </div>
         </div>
       </article>
     )

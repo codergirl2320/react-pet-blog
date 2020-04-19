@@ -1,4 +1,3 @@
-
 //all of the imports we need
 import React from 'react'
 
@@ -81,51 +80,36 @@ class Main extends React.Component {
       })
     }).catch(err => console.log(err))
   }
-
-
-
   render() {
     return (
       <div>
-      <h1 className="main-title">{this.props.view.pageTitle}</h1>
-      { this.props.view.pageName === 'home' ?
-        this.state.posts.map((postData) => (
-          <Post
-            key={postData.id}
-            postData={postData}
-            viewHandler={this.props.viewHandler}
-            deleteHandler={this.deleteHandler}
-          />
-        ))
-        : <Form
-            createHandler={this.createHandler}
-            formInputs={this.props.formInputs}
-            updateHandler={this.updateHandler}
-            view={this.props.view}
-          />
-    }
-<<<<<<< HEAD
-    <img className="Tattoo" src="./images/Tattoo.png"/>
-    <img className="Mel" src="./images/Mel.png"/>
-=======
-
-    <About
-    view={this.state.view}
-    />
-
-
-    <div className="base-images">
-      <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
-      <img className="Duke_two" src="./images/Duke.png" alt=""/>
-      <img className="Snowball" src="./images/Snowball.png" alt=""/>
-      <img className="Norman" src="./images/Norman.png" alt=""/>
-      <img className="Max_Gidget" src="./images/Max_Gidget.png" alt=""/>
-      <img className="Chloe" src="./images/Chloe.png" alt=""/>
-      <img className="poodle" src="./images/poodle.png" alt=""/>
-    </div>
-
->>>>>>> 1da4af8cc36b70345ae4715e729646f8ddc9ba33
-    </div>
+        <h1 className="main-title">{this.props.view.pageTitle}</h1>
+        { this.props.view.pageName === 'home' ?
+          this.state.posts.map((postData) => (
+            <Post
+              key={postData.id}
+              postData={postData}
+              viewHandler={this.props.viewHandler}
+              deleteHandler={this.deleteHandler}
+            />
+          ))
+          : <Form
+              createHandler={this.createHandler}
+              formInputs={this.props.formInputs}
+              updateHandler={this.updateHandler}
+              view={this.props.view}
+            />
+        }
+        <div className="base-images">
+          <img className="Tattoo" src="./images/Tattoo.png" alt=""/>
+          <img className="Duke_two" src="./images/Duke.png" alt=""/>
+          <img className="Snowball" src="./images/Snowball.png" alt=""/>
+          <img className="Norman" src="./images/Norman.png" alt=""/>
+          <img className="Max_Gidget" src="./images/Max_Gidget.png" alt=""/>
+          <img className="Chloe" src="./images/Chloe.png" alt=""/>
+          <img className="poodle" src="./images/poodle.png" alt=""/>
+        </div>
+      </div>
     )
   }
 }
