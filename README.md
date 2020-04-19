@@ -9,10 +9,10 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
 
 ----
 ## Approach Taken
-1. Evaluate the strengths and weaknesses of the team members
-2. Begin Agile approach by assigning backend and frontend files
+1. Evaluate the strengths of the team members.
+2. Begin Agile approach by assigning backend and frontend files.
 3. Meet MVP as soon as possible.
-3. Work on stretch goals
+3. Work on stretch goals.
 4. Test every day and debug.
 
 ----
