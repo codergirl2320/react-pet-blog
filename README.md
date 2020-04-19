@@ -52,11 +52,11 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
 ## Stretch Goals We Tried
 
 * *Routing Stretch Goal*
-  * Just type whatever you want to say here...
+  * Reshae: Just type whatever you want to say here...
   
   
 * *Moment.js Stretch Goal*
-  * Just type whatever you want to say here...
+  * Stephen: Just type whatever you want to say here...
 
 ----
 ## :star2: The 'Secret Blog of Pets' Team
